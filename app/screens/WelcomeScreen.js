@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native-web';
+import { View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, Image, Button } from 'react-native-web';
 
 function WelcomeScreen(props) {
     return (
@@ -8,26 +9,38 @@ function WelcomeScreen(props) {
             blurRadius={6}
             source={require("../assets/Dartmouth.jpeg")}
         >
-            <Text style={styles.titleText}>Outdoor Activities Near You</Text>
+            <Text
+                style={styles.titleText}
+            >
+                Outdoor Activities Near You
+            </Text>
             <View style={styles.activityContainer}>
-                <Image source={{
-                    height: 200,
-                    width: 300,
-                    uri: "https://picsum.photos/id/1011/200/300"
-                }} />
+                <Image
+                    source={{
+                        height: 200,
+                        width: 300,
+                        uri: "https://picsum.photos/id/1011/200/300"
+                    }}
+                />
                 <Text>Rowing</Text>
                 <Button title="Details" onPress={() => alert('Connecticut River')} />
-                <Image source={{
-                    height: 200,
-                    width: 300,
-                    uri: "https://picsum.photos/id/1000/200/300"
-                }} />
+
+                <Image
+                    source={{
+                        height: 200,
+                        width: 300,
+                        uri: "https://picsum.photos/id/1000/200/300"
+                    }}
+                    style={{margin:10}}
+                />
                 <Text>Skiing</Text>
                 <Button title="Details" onPress={() => alert('Dartmouth Skiway')} />
+
             </View>
-        </ImageBackground>        
+        </ImageBackground>
     );
 }
+
 const styles = StyleSheet.create({
     background: {
         flex: 1,
@@ -45,8 +58,8 @@ const styles = StyleSheet.create({
     activityContainer: {
         position: "absolute",
         alignItems: "center",
-        justifyContent: "space-evenly",
         top: 85,
     }
 })
+
 export default WelcomeScreen;
