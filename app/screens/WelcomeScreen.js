@@ -21,6 +21,7 @@ function WelcomeScreen(props) {
                         width: 300,
                         uri: "https://picsum.photos/id/1011/200/300"
                     }}
+                    style={{margin:10}}
                 />
                 <Text>Rowing</Text>
                 <Button title="Details" onPress={() => alert('Connecticut River')} />
